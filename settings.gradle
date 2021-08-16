@@ -1,0 +1,2 @@
+rootProject.name = "Emergency Contacts"
+include ':app'

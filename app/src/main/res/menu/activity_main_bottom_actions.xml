@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_menu_call"
+            android:checked="true"
+            android:icon="@drawable/ic_action_ligar"
+            android:title="@string/call" />
+        <item
+            android:id="@+id/navigation_menu_change_contacts"
+            android:icon="@drawable/ic_action_mudar"
+            android:title="@string/change_contacts" />
+        <item
+            android:id="@+id/navigation_menu_profile"
+            android:icon="@drawable/ic_action_perfil"
+            android:title="@string/profile" />
+
+    </group>
+</menu>

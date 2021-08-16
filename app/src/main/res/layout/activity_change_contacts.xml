@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.ChangeContactsActivity">
+
+    <ScrollView
+        android:id="@+id/activity_change_contacts_sv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/activity_change_contacts_bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity_change_contacts_cl_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#88FCD3C6"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/activity_change_contacts_iv_search_image"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:contentDescription="@string/search_icon"
+                    android:src="@drawable/ic_action_buscar" />
+
+                <EditText
+                    android:id="@+id/activity_change_contacts_edt_search_field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/activity_change_contacts_iv_search_image"
+                    app:layout_constraintEnd_toStartOf="@id/activity_change_contacts_bt_search_button"
+                    android:ems="10"
+                    android:hint="@string/your_contacts"
+                    android:inputType="textPersonName"
+                    android:textColor="#FF5722"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/activity_change_contacts_bt_search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toEndOf="@id/activity_change_contacts_edt_search_field"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    android:background="#FF5722"
+                    android:text="@string/search"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <!--            android:onClick="onClickBuscar"-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/activity_change_contacts_iv_add_contact"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/add_contact_icon"
+                android:src="@drawable/ic_action_mudarv2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_change_contacts_cl_search" />
+
+            <ListView
+                android:id="@+id/activity_change_contacts_lv_contact_list"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="0dp"
+                android:background="#88FEE9E3"
+                android:divider="#FF5722"
+                android:dividerHeight="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/activity_change_contacts_iv_add_contact"
+                tools:ignore="NestedScrolling" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/activity_change_contacts_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_change_contacts_sv"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/activity_main_bottom_actions" />
+</androidx.constraintlayout.widget.ConstraintLayout>

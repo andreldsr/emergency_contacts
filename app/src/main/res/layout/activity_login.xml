@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.activity.LoginActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="15dp"
+            android:background="#88FCD3C6"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/activity_login_tv_bem_vindo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:text="@string/welcome_tv"
+                android:textAlignment="center"
+                android:textColor="#FF5722"
+                android:textColorLink="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/activity_login_til_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/activity_login_edt_login"
+                    android:layout_width="271dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:hint="@string/login"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="true"
+                    android:inputType="textPersonName"
+                    android:paddingStart="4sp"
+                    android:paddingEnd="4sp"
+                    android:textAlignment="textStart"
+                    android:textColor="#FF5722"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/activity_login_til_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_login_til_login">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/activity_login_edt_password"
+                    android:layout_width="271dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:hint="@string/password"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="true"
+                    android:inputType="textPassword"
+                    android:paddingStart="4sp"
+                    android:paddingEnd="4sp"
+                    android:textAlignment="textStart"
+                    android:textColor="#FF5722"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/activity_login_btn_login"
+                android:layout_width="271dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="24dp"
+                android:background="#FF5722"
+                android:text="@string/login_action"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.472"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_login_til_password" />
+
+            <Button
+                android:id="@+id/activity_login_btn_register"
+                android:layout_width="126dp"
+                android:layout_height="49dp"
+                android:background="#55FCD3C6"
+                android:text="@string/register_action"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/activity_login_tv_password_recovery"
+                app:layout_constraintStart_toStartOf="@+id/activity_login_btn_login" />
+
+            <TextView
+                android:id="@+id/activity_login_tv_password_recovery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="54dp"
+                android:autoLink="all"
+                android:linksClickable="false"
+                android:selectAllOnFocus="false"
+                android:text="@string/password_recovery_action"
+                android:textColor="#FF5722"
+                android:textColorLink="#FF5700"
+                app:layout_constraintStart_toEndOf="@+id/activity_login_btn_register"
+                app:layout_constraintTop_toBottomOf="@+id/activity_login_btn_login" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
